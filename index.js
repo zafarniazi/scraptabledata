@@ -10,8 +10,9 @@ const scrapdata = async () => {
   //body > table > tbody > tr > td
   const datas = $("body > table > tbody > tr").each((index, element) => {
     const tds = $(element).find("td");
-    const company = $(tds).text();
+    const company = $(tds[0]).text();
     console.log(company);
+    
   });
 };
 
